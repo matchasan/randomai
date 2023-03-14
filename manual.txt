@@ -1,0 +1,19 @@
+How to use this bot
+
+The index of the kind of command is as below:
+:"manual" or "man"
+    ボットを介してこのREADMEを確認できます。
+
+:"random"
+    指定したフォーマットに合わせてランダムな曲を選びます。
+    -random A B
+        A~Bの難易度で選曲します。
+        選択範囲は14.0~15.0です。
+        その数字から外れた数値は、自動で上限または下限に修正されます。
+    -random ver A
+        バージョンから選曲されます。
+        maimai, green, green+, orange, orange+, pink, pink+, 
+        murasaki, murasaki+, milk, milk+, finale, dx, dx+, 
+        splash, splash+, universe, universe+ で分類されます
+    -random ver A B
+        バージョンをまたいでランダムで選曲します。
