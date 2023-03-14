@@ -2,6 +2,7 @@ import discord
 import os
 import random
 import func
+from dotenv import load_dotenv
 
 intents = discord.Intents.default()
 intents.members = True
@@ -9,10 +10,11 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-with open("./env.txt", "r", encoding='utf-8') as f:
-    token_list = [s.strip() for s in f.readlines()]
+# with open("./env.txt", "r", encoding='utf-8') as f:
+#     token_list = [s.strip() for s in f.readlines()]
+load_dotenv()
 TOKEN = os.getenv("TOKEN")
-CHANNELID = 787843827779108867
+CHANNELID = int(os.getenv("CHANNEL"))
 
 @client.event
 async def on_ready():
